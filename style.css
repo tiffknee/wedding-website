@@ -25,7 +25,7 @@ a:hover,a:focus,a:active{
     text-decoration:#FF5734 wavy underline;
     outline:none;
 }
-h1,h2{
+h1,h2,h3{
     font-family:"Merriweather", serif;
 }
 h1{
@@ -41,6 +41,12 @@ h2{
     font-size:1.5em;
     font-weight:400;
     font-style:italic;
+}
+h3{
+    margin:1em 0;
+    font-size:1.5em;
+    font-weight:400;
+    text-align:center;
 }
 img{
     max-width:100%;
@@ -174,4 +180,42 @@ footer{
 .footer-credit>span{
     display:block;
     margin-bottom:4px;
+}
+
+.recs-wrapper{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    position:relative;
+    margin:40px 0 20px;
+    padding:0 10px;
+    z-index:3;
+}
+.recommendation{
+    -webkit-box-flex:0;
+    -ms-flex:0 0 30%;
+    flex:0 0 30%;
+    background:#fff;
+    padding:0 10px 40px 20px;
+    margin-bottom:20px;
+}
+.recommendation ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+.recommendation li p{
+    margin-top:0;
+    font-size:16px;
+    line-height:2;
+}
+.recommendation li a{
+    font-weight:500;
+    -webkit-transition:background-position 275ms ease-out;
+    transition:background-position 275ms ease-out;
 }
