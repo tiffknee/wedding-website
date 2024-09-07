@@ -68,6 +68,7 @@ h1{
     font-size:2em;
     font-weight:400;
     font-style:regular;
+    text-transform:uppercase;
     text-align:center;
 }
 h2{
@@ -90,8 +91,9 @@ p{
     font-size:24px;
     line-height:1.6;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 860px) {
     .button{
+        padding:1em 4em;
         font-size:12px;
     }
     h1{
@@ -117,15 +119,15 @@ nav{
     position:fixed;
     width:100%;
     height:42px;
-    font-size:.75em;
-    font-weight:300;
-    font-style:regular;
     background:#ffffff;
     border-bottom:1px solid #000000;
     z-index:10;
 }
 .nav-list{
     padding:0 20%;
+    font-size:.75em;
+    font-weight:300;
+    font-style:regular;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -143,9 +145,13 @@ nav{
     text-decoration:none;
     outline:none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 860px) {
+    nav{
+        height:36px;
+    }
     .nav-list{
         padding:0 2%;
+        font-size:.65em;
     }
 }
 
@@ -206,7 +212,7 @@ footer{
     position:relative;
     margin-top:8em;
     padding:3em 10em;
-    z-index:9;
+    z-index:6;
 }
 .footer-nav{
     border-top:1px solid #e6e9ea;
@@ -246,7 +252,7 @@ footer{
     display:block;
     margin-bottom:4px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 860px) {
     #story,#details,#travel,#stay,#registry,#rsvp{
         scroll-margin-top:55px;
     }
@@ -266,16 +272,20 @@ footer{
 
 .image_horizontal{
     display:block;
+    visibility:visible;
 }
 .image_vertical{
    display:none;
+   visibility:hidden;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 860px) {
     .image_horizontal{
         display:none;
+        visibility:hidden;
     }
     .image_vertical{
        display:block;
+       visibility:visible;
     }
 }
 
@@ -290,15 +300,14 @@ footer{
     justify-content:space-between;
     position:relative;
     margin:40px 0 20px;
-    padding:0 10px;
-    z-index:3;
+    z-index:5;
 }
 .recommendation{
     -webkit-box-flex:0;
-    -ms-flex:0 0 30%;
-    flex:0 0 30%;
+    -ms-flex:0 0 28%;
+    flex:0 0 28%;
     background:#fff;
-    padding:0 10px 30px 20px;
+    padding:20px 15px 20px 15px;
     margin-bottom:20px;
 }
 .recommendation ul{
@@ -306,15 +315,24 @@ footer{
     padding:0;
     list-style-type:none;
 }
-.recommendation li p{
-    margin-top:0;
+.recommendation li{
+    margin:2px 0 20px;
     font-size:16px;
-    line-height:2;
 }
 .recommendation li a{
     font-weight:500;
     -webkit-transition:background-position 275ms ease-out;
     transition:background-position 275ms ease-out;
+}
+@media only screen and (max-width: 860px) {
+    .recommendation{
+        -ms-flex:0 0 93%;
+        flex:0 0 93%;
+    }
+    .recommendation li{
+        margin:20px 0 20px;
+        font-size:12px;
+    }
 }
 
 .quiz{
@@ -385,4 +403,22 @@ footer{
     color:white;
     -webkit-transform:rotateY(180deg);
     transform:rotateY(180deg)
+}
+
+.index-header__logo svg{
+    width:50px;
+    margin-bottom:3em;
+}
+canvas{
+    width:100%;
+    height:100%
+}
+.row{
+    display:-ms-flexbox;
+    display:-webkit-box;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    margin-right:-15px;
+    margin-left:-15px
 }
