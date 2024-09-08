@@ -344,18 +344,25 @@ footer{
     -webkit-box-pack:center;
     -ms-flex-pack:center;
     justify-content:center;
-    margin:0 0 40px -50px;
+    margin:0 0 40px -60px;
     list-style-type:none;
 }
 .fact{
     -webkit-box-flex:0;
-    -ms-flex:0 20%;
-    flex:0 20%;
-    min-width:20%;
+    -ms-flex:0 40%;
+    flex:0 40%;
+    min-width:40%;
     min-height:260px;
-    margin:0 40px 40px 0;
+    margin:0 20px 40px 20px;
     -webkit-perspective:1000px;
     perspective:1000px;
+
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 .card{
     position:relative;
@@ -368,6 +375,11 @@ footer{
     transition:transform 0.5s, -webkit-transform 0.5s;
     -webkit-transform-style:preserve-3d;
     transform-style:preserve-3d;
+    font-size:16px;
+    
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    box-sizing: border-box;
 }
 .card:hover{
     -webkit-transform:rotateY(180deg);
@@ -379,15 +391,16 @@ footer{
     height:100%;
     -webkit-backface-visibility:hidden;
     backface-visibility:hidden;
-    font-size:16px;
     padding:12px;
+
+    box-sizing: border-box;
 }
 .card-front{
     background-color:#fff;
 }
 .card-front img{
+    margin-top:40px;
     height:135px;
-    text-align:center;
 }
 .card-back{
     display:-webkit-box;
@@ -404,6 +417,37 @@ footer{
     -webkit-transform:rotateY(180deg);
     transform:rotateY(180deg)
 }
+@media only screen and (max-width: 860px) {
+    .fact{
+        -ms-flex:0 90%;
+        flex:0 90%;
+        min-width:90%;
+        min-height:160px;
+    }
+    .card{
+        font-size:12px;
+    }
+    .card-front img{
+        margin-top:10px;
+        height:100px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .fact{
+        -ms-flex:0 20%;
+        flex:0 20%;
+        min-width:20%;
+        min-height:260px;
+    }
+    .card{
+        font-size:16px;
+    }
+    .card-front img{
+        margin-top:40px;
+        height:135px;
+    }
+}
+
 
 .index-header__logo svg{
     width:50px;
