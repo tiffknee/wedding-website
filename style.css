@@ -386,6 +386,46 @@ footer{
     }
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]:checked ~ .reveal-text {
+    display: inline-block;
+    margin:25px 0 10px;
+    padding:20px;
+    background:#fff;
+    max-height: 1500px;
+    transition: max-height 0.5s ease-in-out;
+}
+input[type="checkbox"]:not(:checked) ~ .reveal-text {
+    transition: max-height 0s ease-in-out;
+  }
+input[type="checkbox"]:checked + label::before {
+    content: "Hide the essay";
+}
+label::before {
+    content: "Read Steve's long story of how they met";
+    color:#663333;
+    text-transform:uppercase;
+    font-size:0.85em;
+    margin-left:10px;
+    padding:0 5px 0 5px;
+    border:1px solid #336666;
+    background: linear-gradient(90deg,#F0DA64,#E79A52) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+label:hover::before {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+.reveal-text {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
 header{
     overflow:hidden;
     width:100%;
