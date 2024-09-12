@@ -391,11 +391,13 @@ header{
     width:100%;
     min-height:90vh;
     z-index:9;
-    background-image: url("plants-a.svg"), url("animals.svg"), url("plants-b.svg");
+    background-image: url("img/plants-a.png"), url("img/animals.png"), url("img/plants-b.png");
     background-repeat: no-repeat;
-    background-position-x:center;
-    background-position-y:center;
     background-size: 45vh;
+    background-position-x:center;
+    background-position-y: 15vh, 15vh, 15vh;
+    -webkit-animation: animateA 5s infinite ease-in-out, animateB 5s infinite ease-in-out;
+    animation: animateA 5s infinite ease-in-out, animateB 5s infinite ease-in-out;
 }
 .header-title{
     padding-top:60vh;
@@ -431,14 +433,26 @@ header{
     color:#000000;
     z-index:8;
 }
-.header-art{
-    position:absolute;
-    left:0%;
-    width:100%;
-    margin-top:-1.5em;
-    z-index:1;
+
+@-webkit-keyframes animateA {
+    0% { background-position-y: 15vh, 15vh, 15vh; }
+    50% { background-position-y: 10vh, 15vh, 20vh; }
+    100% { background-position-y: 15vh, 15vh, 15vh; }
 }
-.header-art img{
-    width:100%;
+@keyframes animateA {
+    0% { background-position-y: 15vh, 15vh, 15vh; }
+    50% { background-position-y: 10vh, 15vh, 20vh; }
+    100% { background-position-y: 15vh, 15vh, 15vh; }
+}
+
+@-webkit-keyframes animateB {
+    0% { background-position-y: 15vh, 15vh, 15vh; }
+    50% { background-position-y: 20vh, 15vh, 10vh; }
+    100% { background-position-y: 15vh, 15vh, 15vh; }
+}
+@keyframes animateB {
+    0% { background-position-y: 15vh, 15vh, 15vh; }
+    50% { background-position-y: 20vh, 15vh, 10vh; }
+    100% { background-position-y: 15vh, 15vh, 15vh; }
 }
 
